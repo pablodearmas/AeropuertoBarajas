@@ -1,4 +1,7 @@
 LTime <- function(T){
+  cp <- runif(1)
+  if (cp > 0.5)
+    T <- T + rexp(1,4)
   T <- T + rexp(1,2)
   T <- T + rnorm(1, 10, sqrt(5))
   bp <- runif(1,0,10)
